@@ -47,7 +47,7 @@ def dag_completed_slack_notification(dag):
     )
     return slack_notification
 
-
+# pass it as a on_failure_callback=task_fail_slack_alert
 def task_fail_slack_alert(context):
     dag = context.get("dag")
     task_instance = context.get("task_instance")
